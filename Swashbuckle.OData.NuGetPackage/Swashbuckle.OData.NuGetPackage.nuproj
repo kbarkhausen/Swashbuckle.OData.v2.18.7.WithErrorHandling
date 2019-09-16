@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>cada82a0-f6ff-45d0-8ee5-9bc6b936be5c</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuProjPath Condition=" '$(NuProjPath)' == '' ">$(MSBuildExtensionsPath)\NuProj\</NuProjPath>
+  </PropertyGroup>
+  <Import Project="$(NuProjPath)\NuProj.props" Condition="Exists('$(NuProjPath)\NuProj.props')" />
+  <PropertyGroup Label="Configuration">
+    <Id>Swashbuckle.OData (With error handling)</Id>
+    <Version>2.18.71</Version>
+    <Title>Swashbuckle.OData</Title>
+    <Authors>Klaus Barkhausen</Authors>
+    <Owners>Klaus Barkhausen</Owners>
+    <Summary>Extends Swashbuckle.OData v2.18.7 with better error handling</Summary>
+    <Description>This adds better error handling to Swashbuckle.OData. If you still need to support v2.18.7 but need it to be some stable, use this NuGet in place until you can upgrade to a more recent version of the Swashbuckle.OData package.</Description>
+    <ReleaseNotes>Fixes: some paths can cause an entire document to fail being generated.</ReleaseNotes>
+    <ProjectUrl>https://github.com/rbeauchamp/Swashbuckle.OData</ProjectUrl>
+    <LicenseUrl>https://github.com/rbeauchamp/Swashbuckle.OData/blob/master/License.txt</LicenseUrl>
+    <Copyright>Copyright © Richard Beauchamp</Copyright>
+    <Tags>Swashbuckle Swagger SwaggerUI OData Documentation Discovery Help WebApi AspNet AspNetWebApi Docs WebHost IIS</Tags>
+    <GenerateSymbolPackage>false</GenerateSymbolPackage>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Swashbuckle.OData\Swashbuckle.OData.csproj" />
+  </ItemGroup>
+  <Import Project="$(NuProjPath)\NuProj.targets" />
+</Project>
