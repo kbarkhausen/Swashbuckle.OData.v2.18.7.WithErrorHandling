@@ -72,7 +72,7 @@ namespace Swashbuckle.OData
                 // .ToDictionary(group => "/" + group.Key, group => CreatePathItem(@group, schemaRegistry));
 				 
 				var paths = new Dictionary<string, PathItem>();
-                foreach (var group in pathsByGroup.Take(50))
+                foreach (var group in pathsByGroup)
                 {
                     var apiKey = "/" + group.Key;
                     try
